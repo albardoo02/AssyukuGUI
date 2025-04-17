@@ -1,0 +1,7 @@
+{
+  "compression": [
+    { "page": 1, "slot": 10, "output": "compressed_iron", "required_amount": 9 },
+    { "page": 1, "slot": 11, "output": "compressed_gold", "required_amount": 9 },
+    { "page": 2, "slot": 5, "output": "compressed_diamond", "required_amount": 4 }
+  ]
+}

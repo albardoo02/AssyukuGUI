@@ -1,0 +1,4 @@
+com\github\albardoo02\AssyukuGUI.class
+com\github\albardoo02\GuiHandler.class
+com\github\albardoo02\AssyukuGuiCommandTabCompleter.class
+com\github\albardoo02\AssyukuGuiCommandExecutor.class

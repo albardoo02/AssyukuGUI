@@ -1,0 +1,10 @@
+name: AssyukuGUI
+version: '${project.version}'
+main: com.github.albardoo02.AssyukuGUI
+api-version: '1.15'
+commands:
+  ragui:
+    aliases:
+      - compress
+      - assyuku
+      - rgui
