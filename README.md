@@ -5,7 +5,7 @@
 
 このプラグインは更新せず、新たにプラグインを作成中です。
 
-新規開発中のCraftGUIは以下のリンクから確認できるます。
+新規開発中のCraftGUIは以下のリンクから確認できます。
 
 https://github.com/albardoo02/CraftGUI
 
