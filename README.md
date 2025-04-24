@@ -7,7 +7,7 @@
 
 新規開発中のCraftGUIは以下のリンクから確認できます。
 
-https://github.com/albardoo02/CraftGUI
+https://github.com/albardoo02/CraftGUIExtension
 
 ## 動作環境 / Environment
 Minecraft Ver 1.15.2でのみ動作確認しています。
