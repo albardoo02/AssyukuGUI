@@ -139,7 +139,6 @@ public class AssyukuGuiCommandExecutor implements CommandExecutor {
 
     private void compressItems(Player player) {
         boolean compressed = false;
-        boolean inventoryFull = false;
 
         for (ItemStack item : player.getInventory().getContents()) {
             if (item != null && item.getType() != Material.AIR) {
@@ -154,18 +153,13 @@ public class AssyukuGuiCommandExecutor implements CommandExecutor {
                     int maxCompressible = totalAmount / requiredAmount;
 
                     if (maxCompressible > 0) {
-                        if (player.getInventory().firstEmpty() == -1) {
-                            player.sendMessage(ChatColor.GOLD + "インベントリに空きがないので変換できません");
-                            inventoryFull = true;
-                            break;
-                        }
                         guiHandler.processCompression(player, item.getType(), mmItemID, requiredAmount, maxCompressible);
                         compressed = true;
                     }
                 }
             }
         }
-        if (!compressed && !inventoryFull) {
+        if (!compressed) {
             player.sendMessage(ChatColor.RED + "圧縮可能なアイテムがインベントリ内にありません");
         }
     }
