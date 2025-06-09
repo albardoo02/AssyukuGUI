@@ -301,10 +301,6 @@ public class GuiHandler implements Listener {
             int result = requiredAmount - totalAmount;
             player.playSound(loc,Sound.ENTITY_VILLAGER_NO, 2, 1);
             player.sendMessage(ChatColor.RED + getItemName(clickedItem.getType()) + "が" + result + "個不足しています (最小必要数: " + requiredAmount + "個)");
-        } else if (inv.firstEmpty() == -1) {
-            player.playSound(loc, Sound.ENTITY_VILLAGER_NO, 2, 1);
-            player.sendMessage(ChatColor.GOLD + "インベントリに空きがないので変換できませんでした");
-            player.closeInventory();
         } else {
             int compressTimes = (clickType == ClickType.LEFT) ? maxCompressible : 1;
             processCompression(player, clickedItem.getType(), mmItemID, requiredAmount, compressTimes);
@@ -330,9 +326,8 @@ public class GuiHandler implements Listener {
     }
 
     void processCompression(Player player, Material material, String mmItemID, int requiredAmount, int times) {
-        int giveAmount = times;
         removeItems(player.getInventory(), material, requiredAmount * times);
-        giveCompressedItem(player, mmItemID, giveAmount);
+        giveCompressedItem(player, mmItemID, times);
         player.sendMessage(ChatColor.GREEN + "" + times + "回圧縮しました");
         player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 2, 1);
     }
